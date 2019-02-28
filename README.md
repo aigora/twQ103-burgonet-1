@@ -1,11 +1,15 @@
-# Título del trabajo
+# Nevera inteligente
 
-Descripción breve del proyecto a realizar (2-3 frases).
+Se trata de una nevera inteligente que permite al usuario añadir productos o restarlos al inventario de 
+la nevera, consultar los productos que tenga en ella y ver las fechas de caducidad de cada producto. Además,
+sugiere al usuario productos dependiendo de una serie de preguntas que el programa hace al inicio.
 
 ## Integrantes del equipo
 
-Nombres, apellidos, y usuario GitHub de los integrantes del equipo.
+Samuel Frederick Hornsby Altares
+Marina Polo Vera
+Javier López Fernández
 
 ## Objetivos del trabajo
 
-Lista de los objetivos que se persiguen con el trabajo propuesto.
+Usar los conocimientos adquiridos en la clase de informática para crear y desarrollar un programa

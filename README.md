@@ -6,9 +6,9 @@ sugiere al usuario productos dependiendo de una serie de preguntas que el progra
 
 ## Integrantes del equipo
 
-Samuel Frederick Hornsby Altares
-Marina Polo Vera
-Javier López Fernández
+- Samuel Frederick Hornsby Altares
+- Marina Polo Vera
+- Javier López Fernández
 
 ## Objetivos del trabajo
 

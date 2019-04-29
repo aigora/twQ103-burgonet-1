@@ -50,23 +50,24 @@ int main () {
 				fichero=fopen("productos.txt","w");
 				printf("nombre del producto:\t");
 				scanf("%s", producto[n].producto_ingresado);
-				fflush(stdin);
+				//fflush(stdin);
 				printf("Introduzca la cantidad que va a introducir:\t");
+				printf("%d",n);
 				scanf("%i",&producto[n].cantidad_ingresada);
-				fflush(stdin);
+				//fflush(stdin);
 				n++;
-				}
-				for (i=0; i<n; i++){
+			}
+			for (i=0; i<n; i++){
 				fprintf(fichero,"%s\t", producto[i].producto_ingresado);
 				fprintf(fichero,"%d\t", producto[i].cantidad_ingresada);	
-				}
+			}
 				fclose(fichero);
 				fflush(stdin);	
-				}
-			if (opcion=='3'){
+		}
+		if (opcion=='3'){
 				fichero=fopen("productos.txt","r");
 				printf("Ver contenido actual en la seccion de carnes\n");
-			}
+		}
 			while(fscanf(fichero, "%s %i", producto[n].producto_ingresado,&producto[n].cantidad_actual));
 			fclose(fichero);
 			printf("Contador: %d\n",n);

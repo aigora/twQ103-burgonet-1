@@ -1,315 +1,75 @@
 #include<stdio.h>
 #include<stdlib.h>
-void inicio(void);
-void titulo(void);
-int main()
-{
-	inicio();
-	titulo();
+
+struct producto{
+char producto_ingresado[100];
+char producto_retirado[100];
+int cantidad_actual;
+int cantidad_ingresada;
+int tiempo_de_caducidad;
+};
+
+int main () {
+	struct producto producto[100];
+	int n=0; //numero de productos
+	int i, contador;	
 	int opcion,opcion2;
-	int vectorproductos;	
-	/*AquÌ tenemos que usar un vector que contenga los productos de la nevera. Lo usarÌamos dentro de los sub-case.
-	Ahora mismo no est· puesto como vector, lo he dejado como si fuera un %f. TambiÈn hay que especificar cÛmo hacemos que los
-	nombres de productos se almacenen dentro de un vector, con su nombre completo*/
-	system("color 1F");
-	printf("Escoja la accion a realizar:\n\n");
-	printf("1)	INGRESAR PRODUCTO\n");
-	printf("2)	RESTAR PRODUCTO\n");
-	printf("3)	VER CONTENIDO ACTUAL\n");
-	printf("4)	CONSULTAR FECHAS DE CADUCIDAD\n");
-	printf("5)	SALIR\n\n");
-	printf("Marque aqui la opcion:\t");
-	scanf("%i",&opcion);
-	switch(opcion)
-	{
-		case 1:
-			system("cls");
-			system("color 1F");
-			titulo();
-			printf("HA ESCOGIDO LA OPCION: INGRESAR PRODUCTO\n\n\n");
-			printf("Seleccione la categoria a la que ingresar un producto:\n\n");
-			printf("1)	CARNES\n");
-			printf("2)	PESCADOS\n");
-			printf("3)	FRUTAS\n");
-			printf("4)	VERDURAS\n");
-			printf("5)	LACTEOS\n");
-			printf("6)	OTROS\n");
-			printf("Marque aqui su opcion:\t");
-			scanf("%i",&opcion2);
-			switch(opcion2)
-			{
-				case 1:
-					system("cls");
-					titulo();
-					system("color 4F");
-					printf("CARNES\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 2:
-					system("cls");
-					titulo();
-					system("color 3F");
-					printf("PESCADOS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 3:
-					system("cls");
-					titulo();
-					system("color 6F");
-					printf("FRUTAS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 4:
-					system("cls");
-					titulo();
-					system("color 2F");
-					printf("VERDURAS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 5:
-					system("cls");
-					titulo();
-					system("color 8F");
-					printf("LACTEOS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 6:
-					system("cls");
-					titulo();
-					system("color 1F");
-					printf("OTROS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-			}
-			break;
-		case 2:
-			system("cls");
-			system("color 1F");
-			titulo();
-			printf("HA ESCOGIDO LA OPCION: RESTAR PRODUCTO\n\n\n");
-			printf("Seleccione la categoria a la que quitar un producto:\n\n");
-			printf("1)	CARNES\n");
-			printf("2)	PESCADOS\n");
-			printf("3)	FRUTAS\n");
-			printf("4)	VERDURAS\n");
-			printf("5)	LACTEOS\n");
-			printf("6)	OTROS\n");
-			printf("Marque aqui su opcion:\t");
-			scanf("%i",&opcion2);
-			switch(opcion2)
-			{
-				case 1:
-					system("cls");
-					titulo();
-					system("color 4F");
-					printf("CARNES\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 2:
-					system("cls");
-					titulo();
-					system("color 3F");
-					printf("PESCADOS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 3:
-					system("cls");
-					titulo();
-					system("color 6F");
-					printf("FRUTAS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 4:
-					system("cls");
-					titulo();
-					system("color 2F");
-					printf("VERDURAS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 5:
-					system("cls");
-					titulo();
-					system("color 8F");
-					printf("LACTEOS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 6:
-					system("cls");
-					titulo();
-					system("color 1F");
-					printf("OTROS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-			}
-			break;
-		case 3:
-			system("cls");
-			system("color 1F");
-			titulo();
-			printf("HA ESCOGIDO LA OPCION: VER CONTENIDO ACTUAL\n\n\n");
-			printf("Seleccione la categoria:\n\n");
-			printf("1)	CARNES\n");
-			printf("2)	PESCADOS\n");
-			printf("3)	FRUTAS\n");
-			printf("4)	VERDURAS\n");
-			printf("5)	LACTEOS\n");
-			printf("6)	OTROS\n");
-			printf("Marque aqui su opcion:\t");
-			scanf("%i",&opcion2);
-			switch(opcion2)
-			{
-				case 1:
-					system("cls");
-					titulo();
-					system("color 4F");
-					printf("CARNES\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 2:
-					system("cls");
-					titulo();
-					system("color 3F");
-					printf("PESCADOS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 3:
-					system("cls");
-					titulo();
-					system("color 6F");
-					printf("FRUTAS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 4:
-					system("cls");
-					titulo();
-					system("color 2F");
-					printf("VERDURAS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 5:
-					system("cls");
-					titulo();
-					system("color 8F");
-					printf("LACTEOS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 6:
-					system("cls");
-					titulo();
-					system("color 1F");
-					printf("OTROS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-			}
-			break;
-		case 4:
-			system("cls");
-			system("color 1F");
-			titulo();
-			printf("HA ESCOGIDO LA OPCION: CONSULTAR FECHAS DE CADUCIDAD\n\n\n");
-			printf("Seleccione la categoria a revisar:\n\n");
-			printf("1)	CARNES\n");
-			printf("2)	PESCADOS\n");
-			printf("3)	FRUTAS\n");
-			printf("4)	VERDURAS\n");
-			printf("5)	LACTEOS\n");
-			printf("6)	OTROS\n");
-			printf("Marque aqui su opcion:\t");
-			scanf("%i",&opcion2);
-			switch(opcion2)
-			{
-				case 1:
-					system("cls");
-					titulo();
-					system("color 4F");
-					printf("CARNES\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 2:
-					system("cls");
-					titulo();
-					system("color 3F");
-					printf("PESCADOS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 3:
-					system("cls");
-					titulo();
-					system("color 6F");
-					printf("FRUTAS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 4:
-					system("cls");
-					titulo();
-					system("color 2F");
-					printf("VERDURAS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 5:
-					system("cls");
-					titulo();
-					system("color 8F");
-					printf("LACTEOS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-				case 6:
-					system("cls");
-					titulo();
-					system("color 1F");
-					printf("OTROS\n\n\n");
-					printf("Indique el nombre de su producto:\t");
-					scanf("%f",&vectorproductos);
-					break;
-			}
-			break;
-		case 5:
-			system("cls");
-			system("color 1F");
-			titulo();
-			printf("HA ESCOGIDO LA OPCION: SALIR\n\n\n");
-			printf("ADIOS Y HASTA PRONTO!");
-			return 0;
-			break;
-		default:
-			return 1;
-			system("cls");
-			break;
+	FILE *fichero;
+	
+// PRIMERO: Leer el fichero
+	fichero = fopen("producto.txt", "r");
+	while (fscanf(fichero, "%s %i", producto[n].producto_ingresado, &producto[n].producto_retirado, &producto[n].cantidad_actual, &producto[n].cantidad_ingresada, &producto[n].tiempo_de_caducidad) != EOF){
+		n++;
 	}
-}
-void inicio(void)
-{
-	system("color 1F");
-	printf("\n\n\n\n\n\n\n\n\n\n\t\tHola! Soy Smart-Fridge. En que puedo ayudarte?\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-	system("pause");
-	system("cls");
-}
-void titulo(void)
-{
-	system("color 1F");
-	printf("\t\t\t******BIENVENIDO A SMART-FRIDGE******\t\t\t\n");
-	printf("\t\t\t\tBy SamuSung Electronics\t\t\t\n\n\n\n");
-}
+	fclose(fichero);
+	
+	do 	{
+		fflush(stdin);
+		printf("Indique el producto que desee gestionar:\n\n");
+		printf("1)	CARNE\n");
+		printf("2)	PESCADO\n");	
+		printf("3)	FRUTA\n");	
+		printf("5)	LACTEOS\n");
+		printf("6)	OTRO\n");
+		printf("7)	Salir\n");
+		printf("Marque aqui la opcion:\t");
+		scanf("%c",&opcion);
+
+		if (opcion=='1'){
+		
+			printf("HA ESCOGIDO LA OPCION: CARNE\n\n\n");
+			printf("Seleccione que quiere hacer con su producto:\n\n");
+			printf("1)	INGRESAR CANTIDAD\n");	//Deber√≠a ser el eje central del programa
+			printf("2)	QUITAR CANTIDAD\n");	//Deber√≠a mostrarse la lista de productos a√±adidos, seleccionar uno o varios de ellos y quitarlo de la lista.
+			printf("3)	VER CONTENIDO ACTUAL\n");	//Deber√≠a s√≥lo mostrar la lista de productos en la nevera despu√©s de haberla modificado (ingresar o restar).
+			printf("4)	CONSULTAR FECHAS DE CADUCIDAD\n");	//Deber√≠a mostrar la lista de productos tras las modificaciones y mostrar los contadores de cada uno.
+			printf("5)	SALIR\n\n");
+			printf("Marque aqui su opcion:\t");
+			scanf("%i",&opcion2);
+			if (opcion=='1'){
+				fichero=fopen("productos.txt","w");
+				printf("nombre del producto:\t");
+				scanf("%s", producto[n].producto_ingresado);
+				fflush(stdin);
+				printf("Introduzca la cantidad que va a introducir:\t");
+				scanf("%i",&producto[n].cantidad_ingresada);
+				fflush(stdin);
+				n++;
+				}
+				for (i=0; i<n; i++){
+				fprintf(fichero,"%s\t", producto[i].producto_ingresado);
+				fprintf(fichero,"%d\t", producto[i].cantidad_ingresada);	
+				}
+				fclose(fichero);
+				fflush(stdin);	
+				}
+			if (opcion=='3'){
+				fichero=fopen("productos.txt","r");
+				printf("Ver contenido actual en la seccion de carnes\n");
+			}
+			while(fscanf(fichero, "%s %i", producto[n].producto_ingresado,&producto[n].cantidad_actual));
+			fclose(fichero);
+			printf("Contador: %d\n",n);
+			}
+	while(opcion!='7'); /*por ejemplo*/
+	}

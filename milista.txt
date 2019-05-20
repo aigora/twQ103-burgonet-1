@@ -1,0 +1,8 @@
+lechuga
+3
+5
+10
+tomate
+8
+8
+8
